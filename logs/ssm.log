@@ -1,0 +1,80 @@
+[DEBUG] [2017-11-04 18:39:20][org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl]initializing datasource to db: jdbc:mysql://localhost:3306/spring-webapp?useUnicode=true&characterEncoding=utf8
+ [DEBUG] [2017-11-04 18:39:20][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+ [DEBUG] [2017-11-04 18:39:20][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+ [ERROR] [2017-11-04 18:39:21][org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl]Exception while initializing Database connection
+ java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1084)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4232)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4164)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:926)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:4732)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1340)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2506)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2539)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2321)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:195)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.doGetConnection(UnpooledDataSource.java:190)
+	at org.apache.ibatis.datasource.unpooled.UnpooledDataSource.getConnection(UnpooledDataSource.java:92)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:375)
+	at org.apache.ibatis.datasource.pooled.PooledDataSource.getConnection(PooledDataSource.java:84)
+	at org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl.initDatabaseType(ProcessEngineConfigurationImpl.java:858)
+	at org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl.initDataSource(ProcessEngineConfigurationImpl.java:808)
+	at org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl.init(ProcessEngineConfigurationImpl.java:624)
+	at org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl.buildProcessEngine(ProcessEngineConfigurationImpl.java:612)
+	at com.cn.hnust.test.createTable(test.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:539)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:761)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:461)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:207)
+[DEBUG] [2017-11-04 18:39:37][org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl]initializing datasource to db: jdbc:mysql://localhost:3306/spring-webapp?useUnicode=true&characterEncoding=utf8
+ [DEBUG] [2017-11-04 18:39:37][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+ [DEBUG] [2017-11-04 18:39:37][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+ [DEBUG] [2017-11-04 18:39:37][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 2008966511.
+ [DEBUG] [2017-11-04 18:39:37][org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl]database product name: 'MySQL'
+ [DEBUG] [2017-11-04 18:39:37][org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl]using database type: mysql
+ [DEBUG] [2017-11-04 18:39:37][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 2008966511 to pool.
+ [DEBUG] [2017-11-04 18:41:00][org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl]initializing datasource to db: jdbc:mysql://localhost:3306/spring-webapp?useUnicode=true&characterEncoding=utf8
+ [DEBUG] [2017-11-04 18:41:00][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+ [DEBUG] [2017-11-04 18:41:00][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+ [DEBUG] [2017-11-04 18:41:00][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 2075809815.
+ [DEBUG] [2017-11-04 18:41:00][org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl]database product name: 'MySQL'
+ [DEBUG] [2017-11-04 18:41:00][org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl]using database type: mysql
+ [DEBUG] [2017-11-04 18:41:00][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 2075809815 to pool.
+ [DEBUG] [2017-11-04 18:41:24][org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl]initializing datasource to db: jdbc:mysql://localhost:3306/spring-webapp?useUnicode=true&characterEncoding=utf8
+ [DEBUG] [2017-11-04 18:41:24][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+ [DEBUG] [2017-11-04 18:41:25][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+ [DEBUG] [2017-11-04 18:41:26][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 1949298838.
+ [DEBUG] [2017-11-04 18:41:26][org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl]database product name: 'MySQL'
+ [DEBUG] [2017-11-04 18:41:26][org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl]using database type: mysql
+ [DEBUG] [2017-11-04 18:41:26][org.apache.ibatis.datasource.pooled.PooledDataSource]Returned connection 1949298838 to pool.
+ 
