@@ -1,2 +1,3 @@
 eclipse.preferences.version=1
 encoding//src/main/resources/jdbc.properties=GBK
+encoding//src/test/java/com/cn/hnust/test.java=gbk
